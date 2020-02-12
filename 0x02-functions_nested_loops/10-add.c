@@ -1,6 +1,8 @@
 #include "holberton.h"
 /**
- * add -
+ * add - function
+ *@a: int
+ *@b: int
  * Return: 0
  */
 int add(int a, int b)

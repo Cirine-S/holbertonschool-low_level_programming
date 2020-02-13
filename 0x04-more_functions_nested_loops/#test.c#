@@ -1,0 +1,11 @@
+{
+  string s = 'n';                                                                                                                                                         int i = 0;                                                                                                                                                              while (i != Null)
+																																										    {
+																																										      i++;                                                                                                                                                                    }
+  printf("%d", n);
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+{
+  string s = 'n';                                                                                                                                                         int i = 0;                                                                                                                                                              while (i != Null)
+																																										    {
+																																										      i++;                                                                                                                                                                    }
+  printf("%d", n)               }

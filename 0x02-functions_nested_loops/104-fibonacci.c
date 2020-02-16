@@ -1,48 +1,21 @@
 #include <stdio.h>
 
 /**
- * main - prints out the first 100 fibonancci numbers
+ * main - prints the first 100 fibonancci numbers
  *
- * Return:0
+ * Return: 0 (Success)
  */
 
 int main(void)
 {
-  long i, j, count, sum, sum_ac, sum_bd;
-  long a, b, c, d;
-
-  i = 0;
-  j = 1;
-  for (count = 0; count < 91; count++)
-    {
-      sum = i + j;
-      i = j;
-      j = sum;
-      printf("%ld, ", sum);
-    }
-  a = i / 10000000000;
-  b = i % 10000000000;
-  c = j / 10000000000;
-  d = j % 10000000000;
-  for (; count < 98; count++)
-    {
-      sum_ac = a + c;
-      sum_bd = b + d;
-      if (sum_bd > 10000000000)
-	{
-	  sum_bd %= 10000000000;
-	  sum_ac++;
-	}
-      if (count != 97)
-	{
-	  printf("%ld%ld, ", sum_ac, sum_bd);
-	  a = c;
-	  b = d;
-	  c = sum_ac;
-	  d = sum_bd;
-	}
-      else
-	printf("%ld%ld\n", sum_ac, sum_bd);
-    }
-  return (0);
+long f1 = 1, f2 = 2, i, fib;
+for (i = 0; i < 90; i++)
+{
+printf("%ld, ", f1);
+fib = f1 + f2;
+f1 = f2;
+f2 = fib;
+}
+printf("%ld\n", f1);
+return (0);
 }

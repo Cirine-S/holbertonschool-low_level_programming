@@ -12,7 +12,7 @@ while (s[i] != '\0')
 {
 i++;
 }
-for (j = 0; j < (i - 1) / 2; j++)
+for (j = 0; j <= (i - 1) / 2; j++)
 {
 permut = s[j];
 s[j] = s[i - 1 - j];

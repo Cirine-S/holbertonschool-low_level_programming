@@ -1,13 +1,14 @@
 #include "holberton.h"
-#include <stdio.h>
+
 /**
- * _strcat - function
+ * _strncat - function
  *@dest: char
  *@src: char
+ *@n: int
  *Return: char
  */
 
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
 int i, j;
 
@@ -18,9 +19,8 @@ while (dest[i] != '\0')
 i++;
 }
 
-printf("%d\n",i);
 j = 0;
-while (src[j] != '\0')
+while (src[j] != '\0' && j < n)
 {
 dest[i] = src[j];
 i++;

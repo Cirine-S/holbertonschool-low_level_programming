@@ -1,4 +1,4 @@
-A#include "holberton.h"
+#include "holberton.h"
 
 /**
  * _strcat - function

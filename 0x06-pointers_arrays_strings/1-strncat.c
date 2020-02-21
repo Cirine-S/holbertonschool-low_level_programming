@@ -1,4 +1,4 @@
-8#include "holberton.h"
+#include "holberton.h"
 
 /**
  * _strncat - function

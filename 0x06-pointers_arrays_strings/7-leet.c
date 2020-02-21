@@ -16,7 +16,10 @@ while (a[i] != '\0')
 for (j = 0; c[j] != '\0'; j++)
 {
 if (a[i] == c[j])
+{
 a[i] = r[j];
+break;
+}
 }
 i++;
 }

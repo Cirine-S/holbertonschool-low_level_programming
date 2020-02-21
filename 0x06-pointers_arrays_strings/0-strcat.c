@@ -18,7 +18,6 @@ while (dest[i] != '\0')
 i++;
 }
 
-printf("%d\n",i);
 j = 0;
 while (src[j] != '\0')
 {

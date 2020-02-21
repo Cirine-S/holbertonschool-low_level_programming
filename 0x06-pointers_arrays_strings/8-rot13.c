@@ -3,20 +3,20 @@
 /**
  * rot13 - function
  * @a: pointer char
- * Return: return char
+ * Return: char
  */
 char *rot13(char *a)
 {
 int i, j, f;
-char d[] = "ABCDEFGHIJKLMabcdefghijklmNOPQRSTUVWXYZnopqrstuvwxyz";
-char m[] = "NOPQRSTUVWXYZnopqrstuvwxyzABCDEFGHIJKLMabcdefghijklm";
-for (i = 0; d[i] != '\0'; i++)
+char a[] = "ABCDEFGHIJKLMabcdefghijklmNOPQRSTUVWXYZnopqrstuvwxyz";
+char r[] = "NOPQRSTUVWXYZnopqrstuvwxyzABCDEFGHIJKLMabcdefghijklm";
+for (i = 0; a[i] != '\0'; i++)
 {
-for (j = 0; m[j] != '\0' && f == 0; j++)
+for (j = 0; r[j] != '\0' && f == 0; j++)
 {
-if (d[i] == m[j])
+if (a[i] == d[j])
 {
-d[i] = m[j];
+a[i] = d[j];
 f = 1;
 }
 }

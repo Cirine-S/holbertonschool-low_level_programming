@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  *_strchr - function
  *@s: char
@@ -13,7 +14,7 @@ char *p;
 while (s[i] != '\0' &&  s[i] != c)
 i++;
 if (s[i] == '\0')
-return (0);
+return (NULL);
 else
 {
 p = &s[i];

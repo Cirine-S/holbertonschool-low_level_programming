@@ -15,14 +15,9 @@ j = 0;
 while (accept[j] != '\0')
 {
 if (accept[j] == s[i])
-break;
-else
+return (&s[i]);
 j++;
 }
-if (accept[j] == s[i])
-break;
 }
-if (accept[j] == s[i])
-return (&s[i]);
 return (0);
 }

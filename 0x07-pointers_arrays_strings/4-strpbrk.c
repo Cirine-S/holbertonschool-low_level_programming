@@ -22,6 +22,7 @@ j++;
 if (accept[j] == s[i])
 break;
 }
+if (accept[j] == s[i])
 return (&s[i]);
 return (0);
 }

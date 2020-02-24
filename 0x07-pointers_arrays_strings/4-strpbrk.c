@@ -23,4 +23,5 @@ if (accept[j] == s[i])
 break;
 }
 return (&s[i]);
+return (0);
 }

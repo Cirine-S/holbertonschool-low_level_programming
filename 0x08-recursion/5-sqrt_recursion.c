@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * sqrt- function
+ * _sqrt- function
  * @i: int
  * @n: int
  * Return: int

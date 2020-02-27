@@ -23,7 +23,7 @@ int pal(int i, int len, char *s)
 {
 	if (i > len / 2)
 		return (1);
-	else if (s[i] != s[len - i -1])
+	else if (s[i] != s[len - i - 1])
 		return (0);
 	else
 		return (pal(i + 1, len, s));
@@ -37,6 +37,7 @@ int pal(int i, int len, char *s)
 int is_palindrome(char *s)
 {
 	int len = 0;
+
 	if (*s == '\0')
 		return (1);
 		len = _strlen_recursion(s);

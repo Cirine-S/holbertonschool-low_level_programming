@@ -9,7 +9,7 @@
  */
 int main(int argc, char const *argv[])
 {
-	int n;
+	int n = 0, m = 0;
 
 	if (argc != 2)
 	{
@@ -21,6 +21,19 @@ int main(int argc, char const *argv[])
 	{
 		puts("0");
 		return (1);
+	}
+	else
+	{
+		m = m + n / 25;
+		n = n % 25;
+		m = m + n / 10;
+		n = n % 10;
+		m = m + n / 5;
+		n = n % 5;
+		m = m + n / 2;
+		n = n % 2;
+		m = m + n;
+		printf("%d\n", m);
 	}
 	return (0);
 }

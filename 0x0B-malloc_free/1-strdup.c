@@ -2,20 +2,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
 /**
- *_strdup _ function
+ *_strdup - function
  *@str: char
  *Return: string
  */
 char *_strdup(char *str)
 {
 	char *s;
-	int len = strlen(str);
 
-	if (str == NULL)
-		return ("null");
-	s = malloc(len);
-	if (s == NULL)
+	s = malloc(strlen(str));
+	if (str == NULL || s == NULL)
 		return ("null");
 	strcpy(str, s);
 	return (s);

@@ -1,7 +1,12 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
-
+/**
+ *main - function
+ *@ac: int
+ *@av: char
+ *Return: int
+ */
 int main(int ac, char **av)
 {
 	int num1 = 0, num2 = 0, mul;

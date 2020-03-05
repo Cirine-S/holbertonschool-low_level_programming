@@ -9,7 +9,7 @@
  */
 int main(int ac, char **av)
 {
-	int num1 = 0, num2 = 0, mul;
+	long int num1 = 0, num2 = 0, mul;
 
 	if (ac != 3)
 	{
@@ -21,7 +21,7 @@ int main(int ac, char **av)
 	num1 = atoi(av[1]);
 	num2 = atoi(av[2]);
 	mul = num1 * num2;
-	printf("%d\n", mul);
+	printf("%ld\n", mul);
 	return (0);
 }
 }

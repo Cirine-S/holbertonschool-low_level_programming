@@ -15,7 +15,8 @@ char **strtow(char *str)
 	if (str == NULL || str == '\0')
 		return (NULL);
 	for (i = 0; str[i] != '\0'; i++)
-	{		if (str[i] != ' ' && str[i + 1] == ' ')
+	{
+		if (str[i] != ' ' && str[i + 1] == ' ')
 			h++;
 	}
 	s = malloc((h + 1) * sizeof(char *));
@@ -37,7 +38,7 @@ char **strtow(char *str)
 			{
 				for (w = 0; w < i; w++)
 					free(s[w]);
-				free (s);
+				free(s);
 				return (NULL);
 			}
 		     w = 0;

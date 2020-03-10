@@ -15,7 +15,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *n, *o;
 	float a;
 
-	if (!dog)
+	if (!dog || !name || !owner || age <= 0)
 		return (NULL);
 	for (i = 0; name[i] != '\0'; i++)
 		;

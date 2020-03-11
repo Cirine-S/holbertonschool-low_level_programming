@@ -3,7 +3,8 @@
 #include "3-calc.h"
 /**
  * main - check the code for Holberton School students.
- *
+ *@argc: int
+ *@argv: char
  * Return: Always 0.
  */
 int main(int argc, char **argv)
@@ -16,15 +17,16 @@ int main(int argc, char **argv)
 		puts("Error");
 		exit(98);
 	}
-	if (*argv[2] != '+' && *argv[2] != '-'  && *argv[2] != '*'  && *argv[2] != '/'  && *argv[2] != '%')
+	if (*argv[2] != '+' && *argv[2] != '-'  && *argv[2] != '*'
+&& *argv[2] != '/'  && *argv[2] != '%')
 	{
-                puts("Error");
-                exit(99);
-        }
+		puts("Error");
+		exit(99);
+	}
 	if ((*argv[2] == '/' || *argv[2] == '%') && *argv[3] == '0')
 	{
-                puts("Error");
-                exit(100);
+		puts("Error");
+		exit(100);
 	}
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[2]);

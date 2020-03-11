@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 		exit(100);
 	}
 	num1 = atoi(argv[1]);
-	num2 = atoi(argv[2]);
+	num2 = atoi(argv[3]);
 	op = get_op_func(argv[2]);
 	res = op(num1, num2);
 	printf("%d\n", res);

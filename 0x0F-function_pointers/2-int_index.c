@@ -1,3 +1,4 @@
+#include <stdio.h>
 /**
  *int_index - function
  *@array: int

@@ -1,3 +1,4 @@
+#include <stdlib.h>
 /**
  *main - function
  *@argc: int
@@ -11,10 +12,10 @@ int main(int argc, char **argv)
 		puts("Error");
 		exit(1);
 	}
-	if (argv[1] < 0)
+	if (argv[1][0] == '-')
 	{
-                puts("Error");
-                exit(2);
-        }
-	return(0);
+		puts("Error");
+		exit(2);
+	}
+	return (0);
 }

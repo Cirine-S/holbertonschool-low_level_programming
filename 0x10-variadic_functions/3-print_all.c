@@ -71,11 +71,11 @@ void print_all(const char * const format, ...)
 			{
 				printf("%s", separator);
 				(lsarg[j]).f(list);
-				separator = ", ";
 				break;
 			}
 			j++;
 		}
+		separator = ", ";
 		i++;
 	}
 	printf("\n");

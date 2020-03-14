@@ -53,6 +53,7 @@ void print_all(const char * const format, ...)
 {
 	unsigned int i = 0, j = 0;
 	va_list list;
+	char *separator = "";
 	ch_p lsarg[] = {
                 {'c', pr_c},
 		{'i', pr_i},
@@ -68,18 +69,15 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == lsarg[j].c)
 			{
+				printf("%s",separator);
 				(lsarg[j]).f(list);
-
-				if (format[i + 1] == '\0')
-				{
-				printf("\n");
+				separator = ", ";
 				break;
-				}
-				printf(", ");
 			}
 			j++;
 		}
 		i++;
 	}
+	printf("\n");
 	va_end(list);
 }

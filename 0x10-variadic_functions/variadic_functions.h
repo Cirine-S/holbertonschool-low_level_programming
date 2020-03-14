@@ -9,8 +9,8 @@
  */
 struct ch
 {
-        char c;
-        void (*f)(va_list);
+	char c;
+	void (*f)(va_list);
 };
 typedef struct ch ch_p;
 

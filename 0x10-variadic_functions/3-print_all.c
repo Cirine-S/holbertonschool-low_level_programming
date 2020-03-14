@@ -39,7 +39,7 @@ void pr_str(va_list list)
 	char *s = va_arg(list, char *);
 
 	if (!s)
-		printf("(nil)");
+		s = "(nil)";
 
 	printf("%s", s);
 }

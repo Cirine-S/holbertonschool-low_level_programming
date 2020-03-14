@@ -75,8 +75,8 @@ void print_all(const char * const format, ...)
 			}
 			j++;
 		}
-		separator = ", ";
 		i++;
+		separator = ", ";
 	}
 	printf("\n");
 	va_end(list);

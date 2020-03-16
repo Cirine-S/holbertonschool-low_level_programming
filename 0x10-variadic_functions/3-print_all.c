@@ -38,9 +38,9 @@ void pr_str(va_list list)
 {
 	char *s = va_arg(list, char *);
 
-        if (!s)
-                s = "(nil)";
-        printf("%s", s);
+	if (!s)
+		s = "(nil)";
+	printf("%s", s);
 }
 
 /**
@@ -54,10 +54,11 @@ void print_all(const char * const format, ...)
 	va_list list;
 	char *separator = "";
 	ch_p lsarg[] = {
-		{'c', pr_c},
-		{'i', pr_i},
-		{'f', pr_fl},
-		{'s', pr_str},
+		{"c", pr_c},
+		{"i", pr_i},
+		{"f", pr_fl},
+		{"s", pr_str},
+		{NULL, NULL}
 	};
 
 	va_start(list, format);
@@ -66,7 +67,7 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (j < 4)
 		{
-			if (format[i] == lsarg[j].c)
+			if (format[i] == *(lsarg[j].c))
 			{
 				printf("%s", separator);
 				(lsarg[j]).f(list);

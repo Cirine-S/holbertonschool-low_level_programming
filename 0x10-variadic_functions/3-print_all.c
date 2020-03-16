@@ -66,8 +66,6 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (j < 4)
 		{
-			if (format[i + 1] == '\0' && format[i] != lsarg[3].c)
-				return;
 			if (format[i] == lsarg[j].c)
 			{
 				printf("%s", separator);
@@ -78,6 +76,8 @@ void print_all(const char * const format, ...)
 			j++;
 		}
 		i++;
+		if (format[i + 1] == '\0' && format[i] != lsarg[3].c)
+			return;
 	}
 	printf("\n");
 	va_end(list);

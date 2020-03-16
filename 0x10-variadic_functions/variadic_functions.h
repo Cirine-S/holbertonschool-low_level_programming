@@ -7,17 +7,11 @@
  * @c: c
  * @f: The function associated
  */
-struct ch
+typedef struct ch
 {
 	char c;
 	void (*f)(va_list);
-};
-typedef struct ch ch_p;
-
-void pr_c(va_list list);
-void pr_i(va_list list);
-void pr_fl(va_list list);
-void pr_str(va_list list);
+} ch_p;
 
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);

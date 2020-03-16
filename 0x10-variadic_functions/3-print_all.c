@@ -36,15 +36,11 @@ void pr_fl(va_list list)
  */
 void pr_str(va_list list)
 {
-	char *s;
+	char *s = va_arg(list, char *);
 
-	s = va_arg(list, char *);
-	if (s)
-	{
-		printf("%s", s);
-		return;
-	}
-	printf("(nil)");
+        if (!s)
+                s = "(nil)";
+        printf("%s", s);
 }
 
 /**
@@ -68,7 +64,7 @@ void print_all(const char * const format, ...)
 	while (format[i] && format)
 	{
 		j = 0;
-		while (lsarg[j].c)
+		while (j < 4)
 		{
 			if (format[i] == lsarg[j].c)
 			{

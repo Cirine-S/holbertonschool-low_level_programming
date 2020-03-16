@@ -65,8 +65,10 @@ void print_all(const char * const format, ...)
 	while (format[i] && format)
 	{
 		j = 0;
-		while (lsarg[j].c)
+		while (j < 5)
 		{
+			if (format[i + 1] == '\0' && format[i] != *(lsarg[3].c))
+				return;
 			if (format[i] == *(lsarg[j].c))
 			{
 				printf("%s", separator);

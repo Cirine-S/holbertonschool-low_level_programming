@@ -36,12 +36,15 @@ void pr_fl(va_list list)
  */
 void pr_str(va_list list)
 {
-	char *s = va_arg(list, char *);
+	char *s;
 
-	if (!s)
-		s = "(nil)";
-
-	printf("%s", s);
+	s = va_arg(list, char *);
+	if (s)
+	{
+		printf("%s", s);
+		return;
+	}
+	printf("(nil)");
 }
 
 /**

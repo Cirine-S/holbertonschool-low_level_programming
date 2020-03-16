@@ -76,8 +76,6 @@ void print_all(const char * const format, ...)
 			j++;
 		}
 		i++;
-		if (format[i + 1] == '\0' && format[i] != lsarg[3].c)
-			return;
 	}
 	printf("\n");
 	va_end(list);

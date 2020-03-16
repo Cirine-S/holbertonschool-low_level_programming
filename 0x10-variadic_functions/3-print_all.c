@@ -54,22 +54,21 @@ void print_all(const char * const format, ...)
 	va_list list;
 	char *separator = "";
 	ch_p lsarg[] = {
-		{"c", pr_c},
-		{"i", pr_i},
-		{"f", pr_fl},
-		{"s", pr_str},
-		{NULL, NULL}
+		{'c', pr_c},
+		{'i', pr_i},
+		{'f', pr_fl},
+		{'s', pr_str},
 	};
 
 	va_start(list, format);
 	while (format[i] && format)
 	{
 		j = 0;
-		while (j < 5)
+		while (j < 4)
 		{
-			if (format[i + 1] == '\0' && format[i] != *(lsarg[3].c))
+			if (format[i + 1] == '\0' && format[i] != lsarg[3].c)
 				return;
-			if (format[i] == *(lsarg[j].c))
+			if (format[i] == lsarg[j].c)
 			{
 				printf("%s", separator);
 				(lsarg[j]).f(list);

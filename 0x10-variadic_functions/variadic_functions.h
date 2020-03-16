@@ -9,7 +9,7 @@
  */
 typedef struct ch
 {
-	char *c;
+	char c;
 	void (*f)(va_list);
 } ch_p;
 

@@ -59,10 +59,10 @@ void print_all(const char * const format, ...)
 		{'f', pr_fl},
 		{'s', pr_str},
 	};
-	if (!format)
-		return;
 
 	va_start(list, format);
+	if (!format)
+		return;
 	while (format[i])
 	{
 		j = 0;

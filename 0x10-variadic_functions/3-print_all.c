@@ -59,9 +59,11 @@ void print_all(const char * const format, ...)
 		{'f', pr_fl},
 		{'s', pr_str},
 	};
+	if (!format)
+		return;
 
 	va_start(list, format);
-	while (format[i] && format)
+	while (format[i])
 	{
 		j = 0;
 		while (j < 4)

@@ -58,15 +58,15 @@ void print_all(const char * const format, ...)
 		{'i', pr_i},
 		{'f', pr_fl},
 		{'s', pr_str},
+		{'\0', NULL},
 	};
 
 	va_start(list, format);
-	if (!format)
-		return;
-	while (format[i])
+
+	while (format && format[i])
 	{
 		j = 0;
-		while (j < 4)
+		while (j < 5)
 		{
 			if (format[i] == lsarg[j].c)
 			{

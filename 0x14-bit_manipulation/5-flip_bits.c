@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- *flip_bits
+ *flip_bits - function
  *@n: int
  *@m: int
  *Return: unsigned int
@@ -12,7 +12,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	flip = n ^ m;
 	while (flip)
 	{
-		i+= flip & 1;
+		i += flip & 1;
 		flip >>= 1;
 	}
 	return (i);

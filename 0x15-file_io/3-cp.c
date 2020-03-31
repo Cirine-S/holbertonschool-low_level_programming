@@ -10,8 +10,7 @@
  */
 int main(int ac, char **av)
 {
-	int file_from, file_to, nbf, nbt;
-	char buffer[1024];
+	int file_from;
 
 	if (ac != 3)
 	{

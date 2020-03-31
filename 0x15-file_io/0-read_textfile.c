@@ -23,9 +23,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 		return (0);
-	size = read(fd, txt, letters);
-	printf("%s\n", txt);
-	printf("%d\n", (int)size);
+	read(fd, txt, letters);
+
+	nb = write(STDOUT_FILENO, txt, letters);
+	if (nb == -1)
+		return (0);
+	free(txt);
+	close(fd);
 
 return (size);
 }

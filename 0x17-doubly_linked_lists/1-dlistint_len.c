@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- *listint_len - function
+ *dlistint_len - function
  *@h: list
  *Return: size
  */
-size_t listint_len(const listint_t *h)
+size_t dlistint_len(const dlistint_t *h)
 {
 	int i = 0;
 

@@ -41,8 +41,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!hn)
 		return (0);
 
-	hn->key = (void *)key;
-	hn->value = strdup((void *)value);
+	hn->key = strdup(key);
+	hn->value = strdup(value);
 	hn->next = ht->array[i];
 	ht->array[i] = hn;
 	return (1);

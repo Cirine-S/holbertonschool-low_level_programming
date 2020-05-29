@@ -37,15 +37,15 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (tmp == NULL)
 	{
-	hn = malloc(sizeof(hash_node_t));
-	if (!hn)
-		return (0);
+		hn = malloc(sizeof(hash_node_t));
+		if (!hn)
+			return (0);
 
-	hn->key = strdup(key);
-	hn->value = strdup(value);
-	hn->next = ht->array[i];
-	ht->array[i] = hn;
-	return (1);
+		hn->key = strdup(key);
+		hn->value = strdup(value);
+		hn->next = ht->array[i];
+		ht->array[i] = hn;
+		return (1);
 	}
 
 
